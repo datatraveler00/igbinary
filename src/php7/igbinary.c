@@ -1965,7 +1965,7 @@ inline static zend_string* igbinary_unserialize_chararray(struct igbinary_unseri
 	if (zstr == NULL) {
 		return NULL;
 	}
-	zend_string_addref(zstr); // TODO: Delete extra refs on cleanup.
+	zend_string_addref(zstr);
 
 	igsd->strings[igsd->strings_count] = zstr;
 	igsd->strings_count += 1;
